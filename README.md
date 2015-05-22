@@ -1,4 +1,4 @@
-# Abacos
+# Maestro PROL
 
 TODO: Write a gem description
 
