@@ -36,11 +36,10 @@ describe MaestroProl::Order do
     it "should return opened list" do
       VCR.use_cassette('order_opened') do
         opened = MaestroProl::Order.opened
-        expect(opened).to have_key(:pedido)
-        expect(opened[:pedido].first).to have_key(:pedido_id)
-        expect(opened[:pedido].first).to have_key(:status)
-        expect(opened[:pedido].first).to have_key(:prev_entrega)
-        expect(opened[:pedido].first).to have_key(:processamento)
+        expect(opened.first).to have_key(:pedido_id)
+        expect(opened.first).to have_key(:status)
+        expect(opened.first).to have_key(:prev_entrega)
+        expect(opened.first).to have_key(:processamento)
       end
     end
   end

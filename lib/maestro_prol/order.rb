@@ -5,7 +5,7 @@ module MaestroProl
     end
 
     def self.opened
-      call(:lista_pedidos_em_aberto, {}).result[:retorno_maestro]
+      call(:lista_pedidos_em_aberto, {}).result[:retorno_maestro][:pedido]
     end
 
     def self.status_by_ean_and_order(ean:, order:)
